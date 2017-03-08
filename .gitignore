@@ -81,3 +81,11 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+#add new ignore file
+*/Debug/
+*/*.dsp
+*/*.dsw
+*/*.ncb
+*/*.opt
+*/*.plg
