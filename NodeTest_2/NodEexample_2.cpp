@@ -1,5 +1,5 @@
 #include <stdio.h>
-//Example4:数组作实参，指针变量作形参；
+//Example4:数组名作实参，指针变量作形参；
 int main()
 {//输入5个整数，并为其中的前n个整数从小到大进行排序；
 	
@@ -54,8 +54,8 @@ int main()
 		scanf("%d",p++);//输入的整数依次存储到指针变量p所指向的存储单元中；
 	printf("How many numbers do you want to sort:\n");
 	scanf("%d",&num);
-	sort(p,num);
 	p=array;//关键一步：注意一定要重新将指针变量p赋值为&array[0];因为经过第一个for循环p的值为&array[5];
+	sort(p,num);
 	for(int j=0;j<5;j++)
 	{
 		printf("%d\t",*p);
@@ -101,8 +101,8 @@ int main()
 		scanf("%d",p++);//输入的整数依次存储到指针变量p所指向的存储单元中；
 	printf("How many numbers do you want to sort:\n");
 	scanf("%d",&num);
-	sort(array,num);
 	p=array;//关键一步：注意一定要重新将指针变量p赋值为&array[0];因为经过第一个for循环p的值为&array[5];
+	sort(p,num);//注意"p=array"必须在前面
 	for(int j=0;j<5;j++)
 	{
 		printf("%d\t",*p);
